@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: stc-remodel-ui
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: stc-remodel-ui
   template:
     metadata:
       labels:
-        app: frontend
+        app: stc-remodel-ui
     spec:
       containers:
-        - name: frontend
+        - name: stc-remodel-ui
           image: softowersolutions/stc-remodel-ui:latest
           ports:
             - containerPort: 80

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: stc-remodel-be
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: stc-remodel-be
   template:
     metadata:
       labels:
-        app: backend
+        app: stc-remodel-be
     spec:
       containers:
-        - name: backend
+        - name: stc-remodel-be
           image: softowersolutions/stc-remodel-be:latest
           ports:
             - containerPort: 3000

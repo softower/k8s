@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: stc-remodel-ui-service
 spec:
   selector:
-    app: frontend
+    app: stc-remodel-ui
   ports:
     - protocol: TCP
       port: 80
