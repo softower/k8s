@@ -1,7 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: stc-remodel-ui-service
+  name: stc-remodel-ui-service,
+  namespace: default
 spec:
   selector:
     app: stc-remodel-ui
