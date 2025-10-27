@@ -16,7 +16,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: stc-remodel-ui
+                name: stc-remodel-ui-service
                 port:
                   number: 80
 
@@ -25,6 +25,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: stc-remodel-be
+                name: stc-remodel-be-service
                 port:
                   number: 80
