@@ -2,29 +2,25 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: stc-remodel-ingress
-  namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   ingressClassName: nginx
   rules:
     - host: demo.transezy.com
       http:
         paths:
-          # Frontend (UI)
-          - path: /
+          - path: /(.*)
             pathType: Prefix
             backend:
               service:
                 name: stc-remodel-ui-service
                 port:
-                  number: 80
-
-          # Backend (API)
-          - path: /api/v1
+                  number: 3000
+          - path: /api/v1(/|$)(.*)
             pathType: Prefix
             backend:
               service:
                 name: stc-remodel-be-service
                 port:
-                  number: 80
+                  number: 3000
