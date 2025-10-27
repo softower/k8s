@@ -3,21 +3,21 @@ kind: Ingress
 metadata:
   name: stc-remodel-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
     - host: demo.transezy.com
       http:
         paths:
-          - path: /(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: stc-remodel-ui-service
                 port:
                   number: 3000
-          - path: /api/v1(/|$)(.*)
+          - path: /api/v1
             pathType: Prefix
             backend:
               service:
