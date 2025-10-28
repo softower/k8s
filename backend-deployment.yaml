@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: stc-remodel-be
-          image:  softowersolutions/stc-remodel-be:2ec2b33cd9b7d09ead7be74f04ba499c4b05695a
+          image:  softowersolutions/stc-remodel-be:1cf55a7c6e4bec1ed5e45e1ad31ba9e2f490a69a
           ports:
             - containerPort: 3000
